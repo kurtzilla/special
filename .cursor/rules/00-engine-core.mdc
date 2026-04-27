@@ -1,0 +1,17 @@
+---
+description: Core C# engine standards — DOD, allocations, blueprint authority, multiplayer safety
+alwaysApply: true
+---
+
+# Engine core
+
+Act as a senior C# engine architect. Prioritize high-performance, maintainable, data-oriented code.
+
+## Directives
+
+1. **Performance:** Prefer data-oriented design. Prefer `struct` over `class` for game entities and components when it improves locality.
+2. **Zero allocations in hot paths:** Avoid heap allocation (`new`) in `Update`, `FixedUpdate`, `Render`, and similar hot paths. Use pools, `ArrayPool<T>`, or fixed buffers.
+3. **Blueprint authority:** For non-trivial work, align with **`.cursor/docs/architecture.md`**. If a request conflicts with that doc, say so and propose a doc change before implementing.
+4. **Data-oriented style:** Decouple logic from data. Systems operate on component arrays. Avoid “fat” objects that mix heavy logic and mutable game data.
+5. **Multiplayer safety:** Treat client-side state changes as **candidates** until authoritative server logic validates them.
+6. **Clarity:** Use clear names; prefer `Span<T>` and `ref` where it helps; avoid magic numbers—use constants or configuration enums.

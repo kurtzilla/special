@@ -1,0 +1,24 @@
+{
+  "files.exclude": {
+    "**/bin": true,
+    "**/obj": true,
+    "**/.vs": true
+  },
+  "search.exclude": {
+    "**/bin": true,
+    "**/obj": true,
+    "**/.vs": true,
+    "**/node_modules": true,
+    "**/artifacts": true,
+    "**/TestResults": true,
+    "**/packages": true
+  },
+  "files.watcherExclude": {
+    "**/bin/**": true,
+    "**/obj/**": true,
+    "**/.vs/**": true,
+    "**/node_modules/**": true,
+    "**/artifacts/**": true,
+    "**/TestResults/**": true
+  }
+}

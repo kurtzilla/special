@@ -1,0 +1,11 @@
+---
+description: Isometric rendering, depth sorting, batching, and tilemap layout
+alwaysApply: true
+---
+
+# Isometric rendering and maps
+
+- **Z-order / depth:** Always consider draw order; sort entities by a `Depth` value derived from screen-space position (e.g. screen Y) before issuing draws.
+- **Batching:** Group draw calls by texture/material to minimize state changes.
+- **Tilemaps:** Prefer flattened 1D arrays for 2D/3D grid data for cache locality.
+- **Coordinates:** Follow the coordinate and depth conventions documented in **`.cursor/docs/architecture.md`** (*Isometric Rendering Rules*). Update that section when conventions change.
