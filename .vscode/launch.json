@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Special.Host",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "dotnet run --project \"${workspaceFolder}/src/Special.Host/Special.Host.csproj\"",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Debug Special.Host (no build)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "dotnet \"${workspaceFolder}/src/Special.Host/bin/Debug/net8.0-windows/Special.Host.dll\"",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
