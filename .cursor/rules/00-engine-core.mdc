@@ -15,3 +15,6 @@ Act as a senior C# engine architect. Prioritize high-performance, maintainable, 
 4. **Data-oriented style:** Decouple logic from data. Systems operate on component arrays. Avoid “fat” objects that mix heavy logic and mutable game data.
 5. **Multiplayer safety:** Treat client-side state changes as **candidates** until authoritative server logic validates them.
 6. **Clarity:** Use clear names; prefer `Span<T>` and `ref` where it helps; avoid magic numbers—use constants or configuration enums.
+7. **Engine manual:** Extended rationale, how-tos, ADRs, and examples live in **`.project/`** (start at `.project/README.md`). When you make substantive engine or workflow changes, update the relevant `.project` chapter in the same effort when practical.
+8. **Keep docs truthful:** Normative contracts belong in **`.cursor/docs/architecture.md`**. When behavior or public API contracts change, update the blueprint so it does not contradict code or `.project/`.
+9. **Testing hold:** Do not add new tests or expand the test suite until the maintainers ask to resume test work. Leave the existing `tests/Special.Engine.Tests` project as-is unless explicitly told to change or remove it.
